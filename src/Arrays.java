@@ -19,6 +19,7 @@ public class Arrays {
     //Get the values at a certain index
     public int getValueAtIndex(int index){
 
+        //Cant add an index which is greater than the array
         if(index < arraySize){
 
             System.out.println("Get value at " + theArray[index]);
@@ -35,6 +36,7 @@ public class Arrays {
 
         boolean valueInArray = false;
 
+        //Cant delete an index
         for(int i = 0; i < arraySize; i++){
 
             if(theArray[i] == value){
@@ -49,6 +51,7 @@ public class Arrays {
     //Delete index in array
     public void deleteIndexInArray(int index){
 
+        //Cant delete an index whose size is greater than the array
         if(index < arraySize){
 
             for(int i = index; i < (arraySize - 1); i++){
@@ -125,4 +128,5 @@ public class Arrays {
 
 
     }
+
 }
