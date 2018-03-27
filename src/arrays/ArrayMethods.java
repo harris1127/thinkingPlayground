@@ -1,26 +1,28 @@
+package arrays;
+
 /**
  * Created by 23rharris on 6/27/17.
  */
-public class Arrays {
+public class ArrayMethods {
 
-    private int [] theArray = new int[50];
+    private int[] theArray = new int[50];
     private int arraySize = 10;
 
     //Generates random values for an array
     public void generateRandomValues() {
 
-        for(int i = 0; i < arraySize; i++){
+        for(int i = 0; i < arraySize; i++) {
 
-            theArray[i] = (int)(Math.random() * 10) + 10;
+            theArray[i] = (int) (Math.random() * 10) + 10;
             System.out.println(theArray[i]);
         }
     }
 
     //Get the values at a certain index
-    public int getValueAtIndex(int index){
+    public int getValueAtIndex(int index) {
 
         //Cant add an index which is greater than the array
-        if(index < arraySize){
+        if(index < arraySize) {
 
             System.out.println("Get value at " + theArray[index]);
             return theArray[index];
@@ -32,14 +34,14 @@ public class Arrays {
     }
 
     //Find the value in the array
-    public boolean doesArrayContainValue(int value){
+    public boolean doesArrayContainValue(int value) {
 
         boolean valueInArray = false;
 
         //Cant delete an index
-        for(int i = 0; i < arraySize; i++){
+        for(int i = 0; i < arraySize; i++) {
 
-            if(theArray[i] == value){
+            if(theArray[i] == value) {
 
                 valueInArray = true;
             }
@@ -49,22 +51,22 @@ public class Arrays {
     }
 
     //Delete index in array
-    public void deleteIndexInArray(int index){
+    public void deleteIndexInArray(int index) {
 
         //Cant delete an index whose size is greater than the array
-        if(index < arraySize){
+        if(index < arraySize) {
 
-            for(int i = index; i < (arraySize - 1); i++){
+            for(int i = index; i < (arraySize - 1); i++) {
 
-                theArray[i] = theArray[i +1];
+                theArray[i] = theArray[i + 1];
             }
         }
     }
 
     //Insert value in array
-    public void insertValue(int value){
+    public void insertValue(int value) {
 
-        if(arraySize < value){
+        if(arraySize < value) {
 
             theArray[arraySize] = value;
             arraySize++;
@@ -72,13 +74,13 @@ public class Arrays {
     }
 
     //Linear search in a array
-    public String linearSearch(int value){
+    public String linearSearch(int value) {
 
         boolean valueInArray = false;
         String indexWithValue = "";
 
-        for(int i = 0; i < arraySize; i ++){
-            if(theArray[i] == value){
+        for(int i = 0; i < arraySize; i++) {
+            if(theArray[i] == value) {
 
                 valueInArray = true;
                 indexWithValue += i + " ";
@@ -86,7 +88,7 @@ public class Arrays {
             }
         }
 
-        if(!valueInArray){
+        if(!valueInArray) {
             indexWithValue = "none";
             System.out.println(indexWithValue);
         }
@@ -95,21 +97,21 @@ public class Arrays {
     }
 
     //Bubble Sort
-    public void bubbleSort(){
+    public void bubbleSort() {
 
-        for(int i = arraySize - 1; i > 1; i--){
+        for(int i = arraySize - 1; i > 1; i--) {
 
-            for(int j = 0; j < i; j++){
+            for(int j = 0; j < i; j++) {
 
-                if(theArray[j] > theArray[j + 1]){
+                if(theArray[j] > theArray[j + 1]) {
 
-                    swapValues(j , j +1);
+                    swapValues(j, j + 1);
                 }
             }
         }
     }
 
-    private void swapValues(int indexOne, int indexTwo){
+    private void swapValues(int indexOne, int indexTwo) {
 
         int temp = theArray[indexOne];
         //Swap with the first index
@@ -121,12 +123,11 @@ public class Arrays {
 
     public static void main(String[] args) {
 
-        Arrays arrays = new Arrays();
-        arrays.generateRandomValues();
-        arrays.getValueAtIndex(1);
-        arrays.linearSearch(16);
+        ArrayMethods arrayMethods = new ArrayMethods();
+        arrayMethods.generateRandomValues();
+        arrayMethods.getValueAtIndex(1);
+        arrayMethods.linearSearch(16);
 
 
     }
-
 }
