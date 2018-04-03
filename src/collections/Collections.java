@@ -18,7 +18,7 @@ public class Collections {
      * List( Most commonly used collections - they have order, indexing
      * Set/SortSet - a collection that has distinct elements it can only be in the collection once
      * Queue - things that have in order FIFO / Deque support FIFO and LIFO
-     * Map - Keyed collections keys are unique
+     * ViewOfMaps - Keyed collections keys are unique
      *
      * @param args
      */
