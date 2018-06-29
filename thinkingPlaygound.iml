@@ -17,6 +17,8 @@
         <SOURCES />
       </library>
     </orderEntry>
+    <orderEntry type="library" name="groovy-3.0.0-alpha-2" level="application" />
+    <orderEntry type="library" name="groovy-3.0.0-alpha-2" level="application" />
   </component>
   <component name="sonarModuleSettings">
     <option name="alternativeWorkingDirPath" value="" />
